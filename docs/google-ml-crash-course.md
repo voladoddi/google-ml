@@ -38,7 +38,8 @@
   (Note: A large learning rate may cause the loss to overshoot the initial loss)
 - (Stochastic) Gradient Descent => Update gradients and loss for EVERY sample.
   (Mini-batch) SGD => Update gradients and losses to be the average of 10-1000 samples.
-
+  TL;DR :  (Efficiency in terms of computational speed : SGD > mini-batch > full-batch)
+           (Efficiency in terms of noise : Full-batch (but redundant data present) > mini-batch > SGD)
   Note: For linear regression problems, it turns out that the starting values aren't important.
 - The general process of reducing loss can be described as so : 
   1. You start with assigning starting values to "w" and "b".
