@@ -39,7 +39,17 @@
 - (Stochastic) Gradient Descent => Update gradients and loss for EVERY sample.
   (Mini-batch) SGD => Update gradients and losses to be the average of 10-1000 samples.
 
-  
+  Note: For linear regression problems, it turns out that the starting values aren't important.
+- The general process of reducing loss can be described as so : 
+  1. You start with assigning starting values to "w" and "b".
+  2. The prediction function then produces an output prediction (label) : y'.
+  3. The loss function looks at (some form of ) difference between y' and y, for e.g. squared loss in linear regression
+     and then a mysterious box (SGD) produces the updates that need to be made for "w" and "b".
+  4. We make the updates to "w" and "b" to yield "w_new" and "b_new".
+  5. The prediction function then starts with "w_new" and "b_new" as "w" and "b" ,
+     and we repeat steps 1-4 UNTIL we reach a certain loss value
+     (typically when loss value stops changing over multiple iterations / starts to change very slowly.
+      This is when we say model has CONVERGED)
   
 
 
